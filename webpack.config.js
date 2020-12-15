@@ -32,11 +32,20 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'public/index.html'
+      template: 'index.html'
     }),
     new CleanWebpackPlugin(),
     ...(process.env.NODE_ENV === "production"
       ? [new MiniCssExtractPlugin({ filename: `[name].css` })]
       : []),
-  ]
+  ],
+  devServer: {
+    host: "localhost",
+    overlay: true,
+    port: 8081,
+    hot: true,
+    open: true, // dev sever 구동 후 브라우저 열기
+  },
+  devtool: 'inline-source-map',
+  mode: 'development'
 }

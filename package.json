@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -w"
+    "start": "npx webpack serve --config webpack.config.js",
+    "build": "webpack --mode development"
   },
   "keywords": [],
   "author": "",

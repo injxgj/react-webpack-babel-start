@@ -3,7 +3,6 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.[hash].js'
